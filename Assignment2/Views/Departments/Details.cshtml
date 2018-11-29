@@ -1,0 +1,50 @@
+﻿@model Assignment2.Models.Department
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Department</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Grocery_dept)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Grocery_dept)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bakery_dept)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bakery_dept)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Total_No_Of_Products)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Total_No_Of_Products)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price_of_Product)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price_of_Product)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

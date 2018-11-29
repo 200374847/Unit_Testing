@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Assignment2.Models.Department>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Grocery_dept)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bakery_dept)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Total_No_Of_Products)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price_of_Product)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Grocery_dept)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bakery_dept)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Total_No_Of_Products)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price_of_Product)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Department_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Department_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Department_ID })
+        </td>
+    </tr>
+}
+
+</table>
